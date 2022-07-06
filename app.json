@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "app-sacocheio-tv",
+    "slug": "app-sacocheio-tv",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
