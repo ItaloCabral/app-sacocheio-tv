@@ -1,8 +1,12 @@
 import React from "react";
-import AppStack from "./src/routes";
-import {} from "styled-components/native";
 import { useFonts } from "expo-font";
+import { Text } from "react-native";
+import { ThemeProvider } from "styled-components/native";
 import { Poppins_600SemiBold } from "@expo-google-fonts/poppins";
+
+import dark from "./src/themes/dark";
+
+import AppStack from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -13,5 +17,9 @@ export default function App() {
     return null;
   }
 
-  return <AppStack />;
+  return (
+    <ThemeProvider theme={dark}>
+      <AppStack></AppStack>
+    </ThemeProvider>
+  );
 }
